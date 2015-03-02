@@ -12,7 +12,7 @@ public class DirectorySearcherTest {
     public static void main(String[] args) throws InterruptedException, ExecutionException {
         System.out.format("Available processors: %d\n\n", Runtime.getRuntime().availableProcessors());
         while (true) {
-            DirectorySearcher directorySearcher = new DirectorySearcher("Гришаев", StandardCharsets.UTF_8);
+            DirectorySearcher directorySearcher = new DirectorySearcher("Текст в UTF-8", StandardCharsets.UTF_8);
             for (int threadNumber : THREADS_NUMBERS) {
                 directorySearcher.run(threadNumber, Paths.get("c:\\Tools"));
             }
